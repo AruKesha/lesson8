@@ -1,0 +1,45 @@
+CREATE - оператор, котороый создает объекты базы данных. "sql create table" таким образом создаются таблицы (база данных)
+
+INSERT - оператор, который вставляет новые записи в таблицу.
+вставка выполняется таким образом:
+INSERT INTO <имя таблицы>[(<имя столбца>,...)]
+{VALUES (<значение столбца>,…)}
+| <выражение запроса>
+SELECT - оператор, который возвращает какие-то данные из базы данных
+представим, у нас есть таблица "Питон":
+PYTHON
+id| name | mark |
+1 | aru  | 100  |
+2 | aki  | 100  |
+SELECT * FROM PYHTON
+(aru 100
+aki 100)
+SELECT * FROM PYTHON WHERE MARK >= 90
+(aru 100
+aki 100)
+
+UPDATE - оператор, который используется для того, чтобы изменить информацию в базе данных
+синтаксис выглядит так ( то, что в квадратной скобке не обязатлеьно)
+UPDATE table_name SET expression [WHERE condition]
+
+people
+id| name | os     |
+1 | aru  | windows|
+2 | aki  | windows|
+3 | airas| ios    |
+
+UPDATE people
+SET os = "linux"
+WHERE id = 1
+
+SELECT *
+FROM people
+WHERE id = 1
+id| name| os   |
+1 | aru | linux|
+
+
+DROP - оператор, который удаляет таблицу из базы данных
+DROP [ INDEX | TABLE | DATABASE ] object( название таблицы, базы, индекса)
+
+DROP TABLE people
